@@ -1,0 +1,67 @@
+.thePhu{
+  background-color:whitesmoke; 
+  height:200px;
+  margin-top:50px;
+}
+
+.riengbiet{
+    text-decoration: none;
+    color:#6203F9;
+    position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background: linear-gradient(to right, #6203F9, #6203F9 50%, black 50%);
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+}
+.riengbiet:hover{
+  /* font-weight: bold; */
+  background-position: 0 100%;
+}
+.riengbiet2:hover{
+  color: #4f4f51;
+}
+a{
+    text-decoration: none;
+    /* color: black; */
+    color: #4f4f51;
+}
+.riengbiet3{
+  text-decoration: none;
+  color:#6203F9;
+  position: relative;
+/* display: inline-block; */
+overflow: hidden;
+background: linear-gradient(to right, #6203F9, #6203F9 50%, black 50%);
+  background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-size: 200% 100%;
+background-position: 100%;
+transition: background-position 275ms ease;
+}
+.riengbiet3:hover{
+/* font-weight: bold; */
+background-position: 0 100%;
+}
+@media only screen and (max-width: 1000px){
+  .footerCSS1{
+    display:none;
+  }
+  .footerCSS2{
+    display:block !important;
+  }
+}
+.accordion-body{
+  text-align:center;
+}
+/* .accordion-item{
+  background-color: gray;
+}
+.accordion-button{
+  background-color: wheat;
+} */

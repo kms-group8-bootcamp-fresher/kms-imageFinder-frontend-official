@@ -1,0 +1,12 @@
+button, button:hover {
+    background-color: #6203F9; color: white; font-weight:bold;
+  }
+  button:checked, button:before, button:last-child {
+    background-color: #6203F9; color: white; font-weight:bold;
+  }
+  .dacBiet:hover{
+    text-decoration: none;
+  }
+  a{
+    color:#6203F9
+  }

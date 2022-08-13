@@ -1,0 +1,7 @@
+#btn-back-to-top {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    z-index:1050;
+    /* display: none; */
+  }

@@ -1,0 +1,190 @@
+<button style="background-color:#6203F9" type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top" (click)="scrollToTop()"><i style="margin-bottom:2220px;" class="fas fa-arrow-up"></i></button>
+
+<!-- Image and text -->
+
+<!-- <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="home">
+        <img
+          src="../../assets/library/LogoTeam8KMS.png"
+          class="me-2"
+          height="50"
+          alt=""
+          loading="lazy"
+        />
+      </a>
+      <a routerLink="home"><h3 class="nav-link">Infinity's Image Finder App (KMS Bootcamp)</h3></a>
+
+      <a class="navbar-brand" routerLink="home">
+        <img
+          src="../../assets/library/KMS-Logo.png"
+          class="me-2"
+          height="50"
+          alt=""
+          loading="lazy"
+        />
+      </a>
+    </div>
+  </nav> -->
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light text-center khongDoi">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" routerLink="/home">
+        <img
+          src="../../../assets/library/LogoTeam8KMS.png"
+          height="50px"
+          alt="MDB Logo"
+          loading="lazy"
+          style="margin-left: auto; margin-right: auto; display: block;"
+        />
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+        <!-- <li class="nav-item headerItemResponsive">
+          <a class="nav-link" href="/shopping-cart">Giỏ hàng </a>
+          <span class="badge rounded-pill badge-notification bg-danger" style="position:relative;right:-10px;bottom:30px; ">0</span>
+        </li>
+        <li class="nav-item headerItemResponsive">
+          <a class="nav-link" href="/favorite">Sản phẩm bạn yêu thích</a>
+          <span class="badge rounded-pill badge-notification bg-danger" style="position:relative;right:-10px;bottom:30px; ">0</span>
+        </li> -->
+      </ul>
+      <!-- <form class="d-flex searchBarCSS">
+        
+        <input class="form-control me-2" 
+        type="search" 
+        placeholder="Nhập để tìm kiếm" aria-label="Search">
+        <button class="btn btn-outline-warning" type="submit">Tìm</button>
+      </form> -->
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+    
+    <!-- Right elements -->
+    <div class="d-flex align-items-center text-center" style="margin: 0 auto">
+      <!-- <div class="input-group" style="margin-right:60px;">
+        <div class="form-outline">
+          <input type="search" id="form1" class="form-control" />
+          <label class="form-label" for="form1">Tìm kiếm</label>
+        </div>
+        <button type="button" class="btn btn-primary">
+          <i class="fas fa-search"></i>
+        </button>
+      </div> -->
+      
+      <!-- Icon -->
+      
+      <!-- <a class="text-reset me-3 headerItemResponsive2" routerLink="shopping-cart" href="/shopping-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="badge rounded-pill badge-notification bg-danger"></span>
+      </a>
+      <a class="text-reset me-3 headerItemResponsive2" href="/favorite">
+        <i class="fas fa-heart"></i>
+        <span class="badge rounded-pill badge-notification bg-danger">0</span>
+      </a> -->
+      
+      <!-- button đăng nhập cho organizer -->
+      <a routerLink="/login-for-organization-board"><button type="button" class="btn" style="background-color: #6203F9; color: white; font-weight:bold;"><span style="font-size:12px">LOGIN FOR ADMIN</span></button></a>
+
+      
+      <!-- Notifications -->
+      <div class="dropdown">
+        <!-- <a
+          class="text-reset me-3 dropdown-toggle hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fas fa-heart"></i>
+          <span class="badge rounded-pill badge-notification bg-danger">0</span>
+        </a> -->
+        
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuLink"
+        >
+          <li>
+            <a class="dropdown-item" href="#">Some news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Another news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Avatar -->
+      <div class="dropdown">
+        <a
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuAvatar"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+        <p id="avatarString" style="display: none;"></p>
+        <!-- <input id="avatarString" style="display: none;" value="{{avatarRandom.message}}"> -->
+        <!-- https://cdn-icons-png.flaticon.com/512/141/141783.png -->
+          <!-- <img
+            class="rounded-circle"
+            height="25"
+            width="25"
+            alt=""
+            id="avatarCustomer"
+            loading="lazy"
+          /> -->
+        </a>
+        
+        <ul
+          class="dropdown-menu dropdown-menu-end text-center"
+          aria-labelledby="navbarDropdownMenuAvatar"
+        >
+          <li>
+            <a class="dropdown-item" routerLink="/sign-in">Đăng nhập</a>
+          </li>
+          <li>
+            <a class="dropdown-item" routerLink="/sign-up">Đăng ký</a>
+          </li>
+          
+          <!-- <li>
+            <a class="dropdown-item dangxuat" href="/home">Đăng xuất</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->

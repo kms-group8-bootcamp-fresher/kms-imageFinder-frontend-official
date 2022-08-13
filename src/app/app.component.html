@@ -1,0 +1,5 @@
+<app-header *ngIf="headerFooter"></app-header>
+<app-admin-header *ngIf="!headerFooter"></app-admin-header>
+<div style="margin-top:25px;"></div>
+<router-outlet *ngIf="headerFooter"></router-outlet>
+<app-footer *ngIf="headerFooter"></app-footer>

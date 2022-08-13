@@ -1,0 +1,167 @@
+<div class="withBackground">
+    <!-- <div class="col">
+        <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedMode"
+            (change)="resetAllForms()">
+            <option value="BIB" selected>BIB</option>
+            <option value="Portrait">Hình ảnh</option>
+            <option value="Webcam">Webcam</option>
+        </select>
+    </div>
+    <br> -->
+
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col-md-6">
+
+            </div> -->
+            <div class="col">
+                <p>Selected search model: {{ selectedMode }}</p>
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedMode"
+                        (change)="resetAllForms()">
+                        <option value="Portrait" selected>Portrait</option>
+                        <option value="Webcam">Webcam</option>
+                        <option value="BIB">BIB</option>
+                    </select>
+                <br>
+                <div [ngSwitch]="selectedMode">
+                    <div *ngSwitchCase="'BIB'">
+                        <!-- <button (click)="changeView1()" type="button" class="btn btn-primary me-5" style="width:100px;">BIB</button> -->
+                        <!-- <button type="button" class="btn btn-primary me-5" style="width:100px;">Image</button> -->
+                        <!-- <button type="button" class="btn btn-primary me-5" style="width:100px;">Webcam</button> -->
+                        <div class="row">
+                            <!-- <h5>Select file:</h5> -->
+                            <!-- <form [formGroup]="formUpload" (ngSubmit)="onSubmit(formUpload.value)">
+                                            <div class="mb-3">
+                                                <label for="name">BIB</label>
+                                                <input type="text" id="name" class="form-control" formControlName="name" [class.is-invalid]="nameInput.invalid && nameInput.touched">
+                                                <div *ngIf="nameInput.invalid && nameInput.touched">
+                                                    <small *ngIf="nameInput.errors?.['required']" class="text-danger">Bắt buộc nhập BIB</small>
+                                                    <small *ngIf="nameInput.errors?.['minlength']" class="text-danger">BIB bắt buộc phải có từ 3 ký tự trở lên</small>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="file" formControlName="imageInput" class="form-control" (change)="onChange($event)"  accept="image/*">
+                                            </div>
+
+                                            <div class="mb-3 col text-center">
+                                                <button [disabled]="!file || formUpload.invalid" type="submit" class="btn btn-primary" disabled>SEARCH</button>
+                                            </div>
+                                        </form> -->
+                            <form [formGroup]="formUpload1" (ngSubmit)="onSubmitForm1(formUpload1.value)">
+                                <div class="mb-3">
+                                    <label for="name">BIB:</label>
+                                    <br>
+                                    <input type="text" id="name" class="form-control" formControlName="name"
+                                        [class.is-invalid]="nameInput.invalid && nameInput.touched">
+                                    <div *ngIf="nameInput.invalid && nameInput.touched">
+                                        <small *ngIf="nameInput.errors?.['required']" class="text-danger">BIB is
+                                            required!</small>
+                                        <small *ngIf="nameInput.errors?.['minlength']" class="text-danger">BIB must have
+                                            3 or more characters!</small>
+                                    </div>
+                                </div>
+                                <div class="mb-3 col text-center">
+                                    <button [disabled]="formUpload1.invalid" type="submit" class="btn btn-primary"
+                                        disabled (click)="hienKetQua()">SEARCH</button>
+                                    <!-- <div>Test error file: {{!file}}</div>
+                                                <div>Test error form: {{formUpload.invalid}}</div> -->
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+                    <div *ngSwitchCase="'Webcam'">
+                        <app-camera (getPicture)="handleImage($event)"></app-camera>
+                        <div class="webcam-image" *ngIf="webcamImage">
+                            <img style="margin-left:auto;margin-right:auto;display:block;"
+                                [src]="webcamImage.imageAsDataUrl" />
+                        </div>
+                        <div class="mt-3 mb-3 col text-center">
+                            <button [disabled]="!webcamImage" type="submit" class="btn btn-primary"
+                                disabled (click)="hienKetQua()">SEARCH</button>
+                            <!-- <div>Test error file: {{!file}}</div>
+                                        <div>Test error form: {{formUpload.invalid}}</div> -->
+                        </div>
+                    </div>
+                    <!-- <div *ngSwitchCase="'Portrait'">
+                    <p>Selected search model: Hình ảnh</p>
+                    <label for="">Chèn hình ảnh:</label>
+                    <br>
+                    <form [formGroup]="formUpload2" (ngSubmit)="onSubmitForm2(formUpload2.value)">
+                        <div class="mb-3">
+                            <input type="file" formControlName="imageInput" id="Portrait" class="form-control"
+                                (change)="onChange($event)" accept="image/*">
+                        </div>
+                        <div class="mb-3 col text-center">
+                            <button [disabled]="!file" type="submit" class="btn btn-primary" disabled>SEARCH</button>
+                        </div>
+                    </form>
+                </div> -->
+                    <div *ngSwitchCase="'Portrait'">
+                            <form class="row g-3" [formGroup]="registerForm" (ngSubmit)="onSubmitImage(registerForm.value)">
+                                    <div>
+                                        <label for="inputEmail4" class="form-label">Upload portrait:</label>
+                                    <!-- submitted && f.imageInput.errors  -->
+                                    <!-- f.imageInput.touched &&  -->
+                                    <input (change)="onImageChangeFromFile($event)" type="file"
+                                        formControlName="imageInput" accept="image/*" class="form-control"
+                                        [class.is-invalid]="isFileUploaded && f.imageInput.invalid" id="inputEmail4">
+                                    <div *ngIf="f.imageInput.errors" class="invalid-feedback">
+                                    <div *ngIf="f.imageInput.errors.required">Need to upload image file</div>
+
+                                    </div>
+                                    </div>
+
+                                <div class="col-12 text-center">
+                                    <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
+                                    <button [disabled]="f.imageInput.invalid" type="submit" class="btn btn-primary"
+                                        disabled (click)="hienKetQua()">SEARCH</button>
+                                </div>
+                            </form>
+                            <br>
+                    </div>
+                    <!-- <p *ngSwitchDefault>...</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <button (click)="changeView()">Change View</button>
+    <div *ngIf="show; then view1; else view2">
+    </div>
+    <ng-template #view1>
+        <h3>View 1</h3>
+    </ng-template>
+    <ng-template #view2>
+        <h3>View 2</h3>
+    </ng-template> -->
+
+<!-- </div> -->
+
+<div *ngIf="showResults" class="container-products" style="padding-bottom: 50px;">
+    <div class="item" *ngFor="let p of imagesResponse">
+        <div>
+            <!-- <a routerLink="/details/{{p._id}}"> -->
+                <input type="checkbox" style="width: 20px; height: 20px; padding-right: 15px;">
+                <img class="img-scale" src="{{p}}" style="padding-left: 10px;">
+            <!-- </a> -->
+        </div>
+    </div>
+    <div class="col-12 text-center">
+        <a routerLink="/get-premium"><button type="button" class="btn"
+        style="background-color: #6203F9; color: white; font-weight:bold; width:260px;"><span
+            style="font-size:15px">Download</span></button></a>
+    </div>
+</div>
+
+<!-- <div class="text-center center thePhu">
+    <h3 style="line-height:120px; vertical-align:center; font-weight:bold; color:black">UNLIMITED PHOTO STORAGE !</h3>
+    <a routerLink="/get-premium"><button type="button" class="btn"
+            style="background-color: #6203F9; color: white; font-weight:bold; width:260px;"><span
+                style="font-size:15px">GET PREMIUM NOW !</span></button></a>
+</div> -->
+

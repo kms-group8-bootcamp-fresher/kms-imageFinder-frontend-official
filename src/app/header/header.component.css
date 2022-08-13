@@ -1,0 +1,375 @@
+/* .nav-item{
+    
+} */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  z-index:1050;
+  /* display: none; */
+}
+.dangxuat {
+    pointer-events: none;
+    color:rgb(175, 175, 175);
+}
+.nav-link{
+    text-decoration: none;
+    color:rgb(174, 0, 174);
+    font-weight: bold;
+    /* position: relative; */
+  display: inline-block;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(174, 0, 174), rgb(174, 0, 174) 50%, black 50%);
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 500ms ease;
+}
+.nav-link:hover{
+    background-position: 0 100%;
+}
+
+/* all for fixed header */
+/* .khongDoi{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:9999999999;
+}
+.d-flex{
+  padding-bottom:5.5px;
+  padding-top:5.5px;
+}
+.dropdown-menu{
+  z-index:999999999999999;
+} */
+/* all for fixed header */
+.headerItemResponsive{
+  display:none;
+}
+.soSanPham{
+  position: absolute;
+    top: 100px;
+    right: 15px;
+    background: #6203F9;
+    color: #fff;
+    font-size: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.searchBarCSS{
+  margin-right:10px;
+}
+@media only screen and (max-width: 991.5px){
+  
+  .searchBarCSS{
+    margin-right:0px;
+  }
+}
+@media only screen and (max-width: 447px){
+  .headerItemResponsive{
+    display:block;
+  }
+  .headerItemResponsive2{
+    /* display:none; */
+  }
+  .searchBarCSS{
+    margin-right:0px;
+  }
+}
+
+/* html,
+body {
+    background: var(--main-color-white-background);
+}
+
+body {
+    font-family: NotoSans;
+}
+
+nav {
+    box-shadow: 0px 4px 4px var(--main-color-box-shadow);
+    background: white;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    top: 0px;
+}
+
+nav .logo {
+    float: left;
+    margin-left: 40px;
+    position: relative;
+    z-index: 5;
+}
+
+nav .logo img {
+    width: 100px;
+}
+
+nav ul {
+    margin-top: 10px;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li {
+    text-align: left;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0px 20px;
+}
+
+a.btnLoginHover:hover,
+#language-selection:hover {
+    border: none;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid var(--main-color-red);
+}
+
+nav ul ul {
+    background-color: white;
+    position: absolute;
+    visibility: hidden;
+    transition: top .3s;
+    margin: 0;
+    box-shadow: 0px 4px 4px var(--main-color-box-shadow);
+}
+
+nav ul li ul li a:hover {
+    color: var(--main-color-red);
+    border: none;
+}
+
+nav ul li:hover>ul {
+    top: 45px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 180px;
+    display: list-item;
+}
+
+nav ul ul li a {
+    line-height: 40px;
+}
+
+.show,
+.icon-header,
+input[type=checkbox] {
+    display: none;
+}
+
+.fa-plus {
+    font-size: 15px;
+    margin-left: 40px;
+}
+
+.buttonLogin {
+    width: 110px;
+    height: 40px;
+    background-color: var(--main-color-red);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+}
+
+.buttonLogin:hover {
+    cursor: pointer;
+}
+
+.userAvatar {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.avatarBox {
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid var(--main-color-border);
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.country-flag-icon {
+    width: 31px;
+    height: 25px;
+    border-radius: 50%;
+    border: 0.5px solid var(--main-color-red);
+}
+
+#language-selection:hover {
+    color: var(--main-color-red);
+}
+
+.traditionalFoodList {
+    padding: 0px;
+}
+
+.foodList {
+    padding: 10px 0;
+}
+
+@media screen and (max-width:1207px) {
+    nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 8px 5px;
+    }
+    .buttonLogin {
+        width: 100px;
+        height: 30px;
+        background-color: var(--main-color-red);
+        color: white;
+        text-align: center;
+        border-radius: 10px;
+        border: none;
+        font-size: 14px;
+    }
+    nav .logo {
+        float: left;
+        width: 40px;
+        margin-left: 40px;
+        margin-top: 5px;
+    }
+    .traditionalFoodList {
+        margin-left: 0px;
+    }
+    .foodList {
+        padding: 0;
+    }
+    nav .logo img {
+        width: 40px;
+    }
+}
+
+@media screen and (max-width:792px) {
+    nav ul {
+        margin: 0;
+        float: left;
+        background-color: white;
+        width: 100%;
+    }
+    nav .logo {
+        margin-left: 10px;
+        width: 40px;
+        height: 40px;
+        margin-top: 5px;
+    }
+    nav ul li a {
+        color: black;
+        line-height: 20px;
+        font-size: 12px;
+        padding-left: 15px;
+    }
+    nav ul li a:hover,
+    .show:hover {
+        color: var(--main-color-red);
+        border: none;
+    }
+    .show+a,
+    ul {
+        display: none;
+    }
+    nav ul li,
+    nav ul ul li {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .show {
+        display: block;
+        color: black;
+        font-size: 12px;
+        padding: 0 15px;
+        line-height: 20px;
+        cursor: pointer;
+        opacity: 1;
+        visibility: visible;
+        margin: 0;
+    }
+    .icon-header {
+        display: block;
+        color: var(--main-color-red);
+        position: absolute;
+        right: 15px;
+        font-size: 25px;
+        margin-top: 8px;
+    }
+    nav ul ul {
+        top: 70px;
+        float: none;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        padding-left: 30px;
+    }
+    nav ul ul li a {
+        line-height: 10px;
+    }
+    nav ul ul a {
+        padding: 0px;
+    }
+    [id^=btn]:checked+ul {
+        display: block;
+    }
+    nav ul ul li {
+        border-bottom: 0px;
+    }
+    span.cancel:before {
+        content: '\f00d';
+    }
+    .buttonLogin {
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .avatarBox {
+        display: inline-block;
+        border: none;
+    }
+    .userAvatar {
+        display: none;
+    }
+    nav {
+        height: 50px;
+    }
+    .traditionalFoodList {
+        margin-left: 30px;
+    }
+} */

@@ -1,0 +1,115 @@
+body{
+  background-image:url('../../assets/library/kms-background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  background-color: yellow;
+}
+/* checkbox-rect */
+.checkbox-rect input[type="checkbox"] {
+  display: none;
+}
+.checkbox-rect input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  font: 14px/20px "Open Sans", Arial, sans-serif;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.checkbox-rect input[type="checkbox"]:hover + label:hover {
+  color: rgb(23, 86, 228);
+}
+.checkbox-rect input[type="checkbox"]:hover + label:before {
+  background: #50565a;
+  box-shadow: inset 0px 0px 0px 2px #f7f2f2;
+}
+.checkbox-rect input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
+.checkbox-rect input[type="checkbox"] + label:before {
+  content: "";
+  display: block;
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid #343a3f;
+  border-radius: 0.2em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: all 0.2s, background 0.2s ease-in-out;
+  transition: all 0.2s, background 0.2s ease-in-out;
+  background: #f3f3f3;
+}
+.checkbox-rect input[type="checkbox"]:checked + label:before {
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 0.2em;
+  border: 2px solid #fff;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  background: #50565a;
+  box-shadow: 0 0 0 1px #000;
+}
+.container-products{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.item{
+    margin: 15px 10px;
+}
+.img-scale{
+    width:200px;
+    height:auto;
+}
+
+.img-scale:hover{
+    cursor:pointer;
+    transform:scale(1.05);
+}
+
+.actionBtn {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    font-size: 1.2em;
+  }
+  
+  .snapshot {
+    text-align: center;
+    
+  }
+  img {
+    max-width: 800px;
+    max-height: 800px;
+  }
+  
+  ul.links {
+    padding-bottom: 20px;
+  }
+  .form-check-label{
+    width:103px; 
+    text-align: left; 
+    margin-left:10px;
+    font-size:15px;
+  }
+
+.thePhu{
+  background-color:whitesmoke; 
+  height:200px;
+}
+.withBackground{
+  /* background-image:url(../../assets/library/running2.jpg); */
+  background-repeat: no-repeat;
+  background-size: 2000px 300px;
+  /* height:500px; */
+}
+button, button:hover {
+  background-color: #6203F9; color: white; font-weight:bold;
+}
+button:checked, button:before, button:last-child {
+  background-color: #6203F9; color: white; font-weight:bold;
+}
